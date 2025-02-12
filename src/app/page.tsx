@@ -4,9 +4,10 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function Page() {
-  const [{/*currentDate*/}, setCurrentDate] = useState('');
+  const [{/*currentDate*/ }, setCurrentDate] = useState('');
 
   useEffect(() => {
+    console.log('Deploy URL:', process.env.NEXT_PUBLIC_BASE_URL);
     setCurrentDate(new Date().toLocaleString());
   }, []);
 
