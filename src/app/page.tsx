@@ -7,6 +7,7 @@ export default function Page() {
   const [{/*currentDate*/ }, setCurrentDate] = useState('');
 
   useEffect(() => {
+    // Verificar se o deploy está funcionando
     console.log('Deploy URL:', process.env.NEXT_PUBLIC_BASE_URL);
     setCurrentDate(new Date().toLocaleString());
   }, []);
