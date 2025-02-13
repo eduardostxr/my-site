@@ -1,17 +1,8 @@
 "use client";
 
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function Page() {
-  const [{/*currentDate*/ }, setCurrentDate] = useState('');
-
-  useEffect(() => {
-    // Verificar se o deploy está funcionando
-    console.log('Deploy URL:', process.env.NEXT_PUBLIC_BASE_URL);
-    setCurrentDate(new Date().toLocaleString());
-  }, []);
-
   return (
     <main>
       <div className="bg-zinc-950 min-h-screen flex items-center justify-center p-4">
@@ -39,7 +30,6 @@ export default function Page() {
               <p className="text-gray-300 text-lg">
                 Se quiser saber mais sobre mim, acesse a página <a href="/about" className="text-blue-500 hover:underline">Sobre</a>.
               </p>
-              {/* <p>Data atual: {currentDate}</p> */}
             </div>
           </div>
         </div>
